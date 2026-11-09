@@ -1,0 +1,107 @@
+{
+  "name": "SETU – Jharkhand Societal Innovation Collaboration Portal",
+  "short_name": "SETU Jharkhand",
+  "id": "/?source=pwa",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait-primary",
+  "background_color": "#080C14",
+  "theme_color": "#080C14",
+  "description": "Department of Higher & Technical Education, Government of Jharkhand. Crowdsourcing societal challenges across 24 districts and connecting them to university innovation cells under NEP 2020.",
+  "categories": [
+    "government",
+    "education",
+    "social",
+    "productivity"
+  ],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-setu.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Submit Problem",
+      "short_name": "Submit",
+      "description": "Submit a local community challenge with GPS and photos",
+      "url": "/citizen",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Explore Challenges",
+      "short_name": "Explore",
+      "description": "Browse active societal challenges across Jharkhand",
+      "url": "/support",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "My Projects",
+      "short_name": "Projects",
+      "description": "Track university research milestones and status",
+      "url": "/journey",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Governance Analytics",
+      "short_name": "Admin",
+      "description": "Statewide district monitoring cockpit",
+      "url": "/admin",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "in.gov.jharkhand.setu"
+    }
+  ]
+}

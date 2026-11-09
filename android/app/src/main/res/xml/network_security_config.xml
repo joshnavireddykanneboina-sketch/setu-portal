@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SETU Network Security Configuration
+  ─────────────────────────────────────────────────────────────────────────────
+  Policy:
+  • All API traffic to the deployed SETU government server MUST use HTTPS (TLS).
+  • Cleartext (HTTP) is only permitted for the Capacitor WebView's internal
+    loopback address (localhost / 127.0.0.1) which serves the bundled JS assets
+    — that traffic never leaves the device.
+  • No third-party cleartext domains are permitted.
+  ─────────────────────────────────────────────────────────────────────────────
+-->
+<network-security-config>
+
+    <!-- Default: all API traffic must use HTTPS -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Trust the Android system CA store (covers government CAs) -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!--
+      Capacitor's bundled WebView loads web assets from the device's loopback
+      interface using the internal scheme. This domain-specific rule permits
+      the local WebView server only — traffic never leaves the device.
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+
+</network-security-config>

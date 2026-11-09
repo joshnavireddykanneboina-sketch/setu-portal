@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SETUPlatformDatabaseSchema",
+  "description": "Relational and Document Schema definition for SETU - Jharkhand Societal Innovation Collaboration Portal (SIH 2026 • PS ID 26043)",
+  "entities": {
+    "User": {
+      "fields": {
+        "id": { "type": "string", "primaryKey": true },
+        "name": { "type": "string" },
+        "email": { "type": "string", "unique": true },
+        "passwordHash": { "type": "string" },
+        "role": { "type": "string", "enum": ["CITIZEN", "UNIVERSITY", "INDUSTRY", "GOVERNMENT"] },
+        "district": { "type": "string", "nullable": true },
+        "institution": { "type": "string", "nullable": true },
+        "organization": { "type": "string", "nullable": true },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "SocietalChallenge": {
+      "fields": {
+        "id": { "type": "string", "primaryKey": true },
+        "title": { "type": "string" },
+        "domain": { "type": "string", "enum": ["Water Resources", "Agriculture", "Healthcare", "Clean Energy", "Rural Livelihoods", "Urban Infrastructure", "Accessibility", "Education"] },
+        "district": { "type": "string" },
+        "block": { "type": "string" },
+        "panchayat": { "type": "string" },
+        "description": { "type": "string" },
+        "severity": { "type": "string", "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"] },
+        "status": { "type": "string", "enum": ["Submitted", "Under University Review", "Assigned to HEI Team", "Prototyping", "Field Tested", "Patented"] },
+        "assignedUniversity": { "type": "string", "nullable": true },
+        "assignedUniversityId": { "type": "string", "nullable": true },
+        "industryPartner": { "type": "string", "nullable": true },
+        "industryPartnerId": { "type": "string", "nullable": true },
+        "csrFundingPledged": { "type": "string", "nullable": true },
+        "estimatedBeneficiaries": { "type": "number", "nullable": true },
+        "multimedia": { "type": "array", "nullable": true },
+        "team": { "type": "object", "nullable": true },
+        "submittedAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "University": {
+      "fields": {
+        "id": { "type": "string", "primaryKey": true },
+        "name": { "type": "string" },
+        "district": { "type": "string" },
+        "specializations": { "type": "array" },
+        "activeProjectsCount": { "type": "number" },
+        "facultyLead": { "type": "string" },
+        "incubationCentres": { "type": "array" }
+      }
+    },
+    "IndustryPartner": {
+      "fields": {
+        "id": { "type": "string", "primaryKey": true },
+        "name": { "type": "string" },
+        "sectors": { "type": "array" },
+        "csrPledgedTotal": { "type": "string" },
+        "sponsoredChallenges": { "type": "array" },
+        "mentorsAssigned": { "type": "number" }
+      }
+    },
+    "District": {
+      "fields": {
+        "code": { "type": "string", "primaryKey": true },
+        "name": { "type": "string" },
+        "division": { "type": "string" },
+        "headquarters": { "type": "string" },
+        "activeChallenges": { "type": "number" },
+        "primaryChallenge": { "type": "string" }
+      }
+    },
+    "ProjectMilestone": {
+      "fields": {
+        "id": { "type": "string", "primaryKey": true },
+        "challengeId": { "type": "string", "foreignKey": "SocietalChallenge.id" },
+        "title": { "type": "string" },
+        "status": { "type": "string", "enum": ["PENDING", "IN_PROGRESS", "VERIFIED", "COMPLETED"] },
+        "targetDate": { "type": "string" },
+        "deliverables": { "type": "array" }
+      }
+    }
+  }
+}

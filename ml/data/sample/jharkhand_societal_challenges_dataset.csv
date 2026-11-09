@@ -1,0 +1,170 @@
+text,intent,urgency
+"Severe fluoride contamination exceeding 5.2 ppm in rural drinking water handpumps across Jama block",Water Resources and Sanitation,red
+"Deep borewell water contains yellow sediment and high iron levels in Dumka villages",Water Resources and Sanitation,amber
+"Open well drinking water contaminated with coliform bacteria after monsoon floods in Pakur",Water Resources and Sanitation,red
+"Need low-cost bio-char filtration system for arsenic removal in Sahibganj aquifer",Water Resources and Sanitation,amber
+"Check dam on local stream breached causing acute water scarcity for winter irrigation",Water Resources and Sanitation,amber
+"Fluorosis symptoms reported among school children drinking groundwater in Godda",Water Resources and Sanitation,red
+"Borewell depth exceeding 450 feet with declining groundwater table in Ranchi urban fringe",Water Resources and Sanitation,amber
+"Unfiltered coal washery runoff polluting local rivulet and cattle drinking ponds in Dhanbad",Water Resources and Sanitation,red
+"Rainwater harvesting structures damaged and silted in semi-arid plateau of Giridih",Water Resources and Sanitation,green
+"Need solar-powered reverse osmosis water ATM for remote tribal hamlets in Simdega",Water Resources and Sanitation,green
+"Turbid muddy water supplied through piped rural drinking water tap in Khunti village",Water Resources and Sanitation,green
+"Arsenic and heavy metal traces detected in agricultural wells near mining belt in Ramgarh",Water Resources and Sanitation,red
+"Broken community soak-pit toilets leading to wastewater stagnation in weekly rural market",Water Resources and Sanitation,green
+"Submerged tube wells in flood-prone river banks of Rajmahal requiring elevated handpump platforms",Water Resources and Sanitation,amber
+"Saline and brackish taste in handpump drinking water along Subarnarekha river basin",Water Resources and Sanitation,green
+"Drinking water supply contaminated with coal dust and toxic sludge in Jharia mining colonies",Water Resources and Sanitation,red
+"Siltation in village water storage pond reducing livestock drinking water in Latehar",Water Resources and Sanitation,green
+"Community open defecation near surface pond polluting village primary drinking reservoir",Water Resources and Sanitation,amber
+"Need affordable domestic fluoride removal filtration kit for rural households in Santhal Pargana",Water Resources and Sanitation,amber
+"Dry handpumps during peak summer in hilly terrains of Garhwa causing water distress",Water Resources and Sanitation,amber
+"Fluoride concentration causing knock-knee syndrome and teeth discoloration in Palamu school",Water Resources and Sanitation,red
+"Heavy iron precipitation choking drinking water pipes in East Singhbhum villages",Water Resources and Sanitation,amber
+"Lack of sanitation facilities and non-functional bio-toilets along Kanwar yatra pilgrim route in Deoghar",Water Resources and Sanitation,green
+"Sewage discharge directly into water bodies threatening aquatic life and public health",Water Resources and Sanitation,red
+"Off-season tomato and cauliflower crops damaged by severe winter frost in Khunti",Agriculture and Soil Health,amber
+"Fall armyworm pest infestation destroying hybrid maize crops in Hazaribagh",Agriculture and Soil Health,amber
+"Acidic red soil with low phosphorus availability reducing paddy yields across Ranchi",Agriculture and Soil Health,green
+"Lack of low-cost decentralized cold storage causing 40 percent vegetable spoilage in Mandar",Agriculture and Soil Health,amber
+"Severe soil erosion on slope lands during heavy rainfall washing topsoil in Latehar",Agriculture and Soil Health,green
+"Need micro-drip irrigation automation for high-value capsicum and green peas farming",Agriculture and Soil Health,green
+"Sudden blast disease in paddy crop turning leaves brown in East Singhbhum",Agriculture and Soil Health,amber
+"Termite attack on young mango and litchi orchards in plateau zone of Ramgarh",Agriculture and Soil Health,green
+"Farmers forced to do distress sale of vegetables due to absence of local cold storage",Agriculture and Soil Health,amber
+"Need affordable moisture sensor and weather advisory system for smallholder farmers",Agriculture and Soil Health,green
+"Soil zinc and boron micronutrient deficiency causing leaf chlorosis in Gumla paddy fields",Agriculture and Soil Health,green
+"Stem borer and leaf folder caterpillar infestation across kharif paddy in Palamu",Agriculture and Soil Health,amber
+"Absence of solar grain dryer forcing farmers to dry harvest on highway roads",Agriculture and Soil Health,green
+"Rapid decline of earthworm population due to uncalibrated chemical fertilizer use in Lohardaga",Agriculture and Soil Health,green
+"Post-harvest vegetable rotting in Ormanjhi weekly market due to lack of refrigerated transit",Agriculture and Soil Health,amber
+"Drought stress in rainfed upland rice cultivation requiring soil moisture retaining bio-mulch",Agriculture and Soil Health,amber
+"Heavy fungal wilt disease wiping out brinjal and chilli cultivation in Bokaro cluster",Agriculture and Soil Health,amber
+"Soil hardening and low organic carbon reducing crop root penetration in Deoghar",Agriculture and Soil Health,green
+"Lack of seed germination testing and certified drought-resistant paddy seeds in Chatra",Agriculture and Soil Health,green
+"Bacterial leaf blight in traditional scented rice varieties in Hazaribagh plateau",Agriculture and Soil Health,amber
+"Wild boar and monkey crop raiding damaging organic vegetable cultivation near forest boundary",Agriculture and Soil Health,amber
+"Need bio-pesticide formulation to replace hazardous organophosphates in capsicum cultivation",Agriculture and Soil Health,green
+"Over-irrigation in clayey soil causing waterlogging and root rot in potato fields",Agriculture and Soil Health,green
+"Primary Health Centre lacks neonatal incubator and reliable electricity in Chatra",Healthcare and Rural Nutrition,red
+"High prevalence of sickle cell anemia among tribal population in West Singhbhum",Healthcare and Rural Nutrition,amber
+"Open sewage drain overflowing near primary school during rains in Jamshedpur slums",Healthcare and Rural Nutrition,amber
+"No ambulance accessible due to unpaved road during emergency deliveries in Garhwa",Healthcare and Rural Nutrition,red
+"Lack of sanitary pad disposal incinerators in rural residential girls schools",Healthcare and Rural Nutrition,green
+"Malnutrition and stunting among children under five in remote anganwadis of Palamu",Healthcare and Rural Nutrition,amber
+"Mosquito breeding in stagnant water ponds causing malaria outbreak in Chaibasa",Healthcare and Rural Nutrition,red
+"Drinking water contamination causing gastrointestinal infection epidemic in Deoghar village",Healthcare and Rural Nutrition,red
+"Need solar vaccine refrigerator for immunization drives in off-grid sub-centres",Healthcare and Rural Nutrition,green
+"Inadequate sanitation and broken community toilets near weekly rural market in Bokaro",Healthcare and Rural Nutrition,green
+"High maternal mortality during child delivery due to lack of blood storage center in Simdega",Healthcare and Rural Nutrition,red
+"Snakebite fatalities rising in monsoon due to absence of anti-venom refrigeration in rural clinic",Healthcare and Rural Nutrition,red
+"Skin rashes and dermatitis among women washing clothes in untreated industrial river stream",Healthcare and Rural Nutrition,amber
+"Severe iron deficiency anemia reported among adolescent tribal girls in Pakur",Healthcare and Rural Nutrition,amber
+"Lack of portable diagnostic kit for rapid detection of malaria and dengue in field camps",Healthcare and Rural Nutrition,amber
+"Tuberculosis patients in tribal mining areas defaulting on treatment due to clinic distance",Healthcare and Rural Nutrition,amber
+"Emergency cardiac arrest in remote block without automated external defibrillator AED",Healthcare and Rural Nutrition,red
+"Anganwadi center building dilapidated with cracked roof affecting hot cooked meal distribution",Healthcare and Rural Nutrition,green
+"Absence of ultrasound diagnostic machine for high-risk pregnant women in sub-divisional hospital",Healthcare and Rural Nutrition,amber
+"Acute diarrheal infection spreading through community handpump in Godda village",Healthcare and Rural Nutrition,red
+"Lack of clean delivery kits and sanitized labor room in remote health sub-centre",Healthcare and Rural Nutrition,red
+"Fluorosis induced joint stiffness preventing elderly villagers from walking in Dumka",Healthcare and Rural Nutrition,amber
+"Frequent power blackouts interrupting irrigation pump sets and village schooling in Gumla",Clean Energy and Microgrids,amber
+"Need micro-hydel power turbine on local perennial waterfall for electricity in Netarhat",Clean Energy and Microgrids,green
+"Solar street lights inverters damaged and batteries drained in Dumka village panchayat",Clean Energy and Microgrids,green
+"Rice mills in Lohardaga generating rice husk waste that could be converted to biomass energy",Clean Energy and Microgrids,green
+"Diesel irrigation pumps too expensive for marginal farmers needing solar water pumping",Clean Energy and Microgrids,amber
+"Lack of electricity in scheduled tribe hamlet 5 km away from grid in Simdega forest",Clean Energy and Microgrids,amber
+"Need rooftop solar microgrid for secondary school and computer learning lab",Clean Energy and Microgrids,green
+"Biomass gasifier required for community cooking in tribal residential ashram schools",Clean Energy and Microgrids,green
+"Frequent transformer burnouts during peak summer in rural areas of Koderma",Clean Energy and Microgrids,amber
+"Need solar charging stations for e-rickshaws operating in semi-urban Dumka",Clean Energy and Microgrids,green
+"High voltage fluctuations burning domestic appliances and flour mill motors in Giridih",Clean Energy and Microgrids,amber
+"Tribal forest hamlet using kerosene lamps needing low-cost solar home lighting kit",Clean Energy and Microgrids,green
+"Forest wood burning for cooking causing severe indoor air pollution in remote rural households",Clean Energy and Microgrids,amber
+"Lack of net metering facility for rooftop solar installations in rural degree colleges",Clean Energy and Microgrids,green
+"Solar water heater systems at district hospital defunct due to hard water scaling",Clean Energy and Microgrids,green
+"Decentralized off-grid battery storage unit degraded after three years of deep discharge",Clean Energy and Microgrids,amber
+"Need hybrid solar-wind mini power plant on hilltop tribal settlements in Palamu",Clean Energy and Microgrids,green
+"Power lines snapped by falling trees during storms leaving villages in darkness for 10 days",Clean Energy and Microgrids,amber
+"Agricultural cattle waste discarded without utilization requiring community biogas digestor",Clean Energy and Microgrids,green
+"High transmission grid losses and illegal tapping causing frequent brownouts in industrial suburbs",Clean Energy and Microgrids,amber
+"Tussar silk rearers facing cocoons mortality due to unpredictable temperature swings",Rural Livelihoods,amber
+"Lac cultivators in Torpa suffering low prices due to lack of local processing facilities",Rural Livelihoods,green
+"Artisans crafting Dokra bell metal craft in Khunti need modern design and marketing linkage",Rural Livelihoods,green
+"Bamboo craft artisans lack mechanized cutting and preservation tools in Hazaribagh",Rural Livelihoods,green
+"Forest honey collectors need scientific moisture reduction and hygienic packaging units",Rural Livelihoods,green
+"Mahua flower processing unit required to produce value-added non-alcoholic edible products",Rural Livelihoods,green
+"Minor forest produce gatherers lack weighing scales and storage sheds in Latehar",Rural Livelihoods,green
+"Mushroom cultivation self-help groups need climate-controlled spawning chambers",Rural Livelihoods,green
+"Chirounji and sal seed collectors selling raw produce at throwaway prices to middlemen",Rural Livelihoods,amber
+"Rural women potters in Saraikela need electric pottery wheels to increase terracotta production",Rural Livelihoods,green
+"Traditional weavers of Santhali lungi and sarees lack modern jacquard looms for complex motifs",Rural Livelihoods,green
+"Broom grass collectors in Simdega need mechanical bundling and processing tools",Rural Livelihoods,green
+"Fish farmers suffering high fingerling mortality during summer in community village ponds",Rural Livelihoods,amber
+"Goat rearing farmers losing livestock due to sudden outbreak of PPR disease in Chatra",Rural Livelihoods,red
+"Tribal lac farmers losing resin yields to predatory insect attack on host ber trees",Rural Livelihoods,amber
+"Tasar cocoon spinning by hand thigh-reeling causing orthopedic injuries among rural women",Rural Livelihoods,green
+"Kendu leaf plucking laborers lack protective footwear and shade amenities at collection points",Rural Livelihoods,green
+"Rural dairy cooperatives losing milk to souring due to lack of village bulk milk chilling unit",Rural Livelihoods,amber
+"Handicraft wood carvers of Dumka lack kiln drying chamber causing wood warping in monsoon",Rural Livelihoods,green
+"Organic lemongrass distillers facing low oil recovery due to obsolete distillation boiler",Rural Livelihoods,green
+"Poultry farmers suffering high bird mortality due to sudden heatstroke in summer sheds",Rural Livelihoods,amber
+"Fly ash from thermal power plant polluting agricultural fields and roads in Bokaro",Urban Infrastructure and Mobility,amber
+"Unpaved earthen road connects 12 tribal villages washed out every monsoon in Pakur",Urban Infrastructure and Mobility,amber
+"Wooden bridge over river damaged by flood cutting off village connectivity in Saranda",Urban Infrastructure and Mobility,red
+"Lack of solid waste segregation and plastic disposal unit in Deoghar municipal area",Urban Infrastructure and Mobility,green
+"Traffic congestion and lack of pedestrian footpaths near college road in Dhanbad",Urban Infrastructure and Mobility,green
+"Severe soil subsidence and mine fire fumes impacting residential settlement in Jharia",Urban Infrastructure and Mobility,red
+"Potholed district highway between Ranchi and Khunti causing frequent accidents",Urban Infrastructure and Mobility,amber
+"Underground drainage pipeline choked leading to waterlogging in Giridih market",Urban Infrastructure and Mobility,green
+"Street lighting non-functional creating public safety concerns in Chaibasa bus stand",Urban Infrastructure and Mobility,green
+"No public transport or electric feeder buses for students traveling from villages to university",Urban Infrastructure and Mobility,green
+"Open storm water drain overflowing with toxic municipal sewage in Chas urban cluster",Urban Infrastructure and Mobility,amber
+"Bridge pillar cracks detected on state highway culvert posing structural collapse hazard",Urban Infrastructure and Mobility,red
+"Dust pollution from coal transport trucks causing respiratory distress along highway villages",Urban Infrastructure and Mobility,amber
+"Unregulated construction debris dumped along river bed causing monsoon flash flooding",Urban Infrastructure and Mobility,amber
+"Traffic bottleneck and lack of automated signals at busy railway level crossing in Ramgarh",Urban Infrastructure and Mobility,green
+"Lack of designated commercial parking causing severe encroachment on main market boulevard",Urban Infrastructure and Mobility,green
+"Municipal sewer line burst flooding residential colonies with raw sewage in Dhanbad",Urban Infrastructure and Mobility,red
+"Unfinished flyover construction creating hazardous blind turns and traffic fatalities",Urban Infrastructure and Mobility,red
+"Absence of storm water drainage in low-lying peri-urban settlements in Ranchi",Urban Infrastructure and Mobility,amber
+"Panchayat office building has no wheelchair ramp preventing disabled citizens from voting",Accessibility and Public Services,amber
+"Visually impaired college students in Ranchi lack screen reading and Braille study materials",Accessibility and Public Services,green
+"Public Distribution System ration shop biometric thumb scanner fails for aged manual laborers",Accessibility and Public Services,amber
+"Deaf and mute patients at district hospital face barrier without sign language interpreter",Accessibility and Public Services,amber
+"Elderly pension beneficiaries walking 8 km due to non-functional mobile banking CSP kiosk",Accessibility and Public Services,green
+"District collectorate building lacks tactile floor guidance paths for blind citizens",Accessibility and Public Services,green
+"Government portal lacks voice-activated assistance for illiterate rural citizens to lodge grievances",Accessibility and Public Services,green
+"Wheelchair users cannot board high-step public buses at Ranchi central bus terminal",Accessibility and Public Services,amber
+"No barrier-free disabled accessible toilets in primary rural health care centres in Dumka",Accessibility and Public Services,green
+"Public notices and land records not accessible in Santhali or Ho regional languages",Accessibility and Public Services,green
+"Disabled children unable to reach second floor classrooms in multi-storey composite school",Accessibility and Public Services,amber
+"Biometric attendance device placed at high level inaccessible for wheelchair using teachers",Accessibility and Public Services,green
+"Wheelchair access ramp at sub-divisional civil court too steep and without handrails",Accessibility and Public Services,amber
+"Banking ATM machines lack audio earphone jack and tactile keypads for blind customers",Accessibility and Public Services,green
+"Hearing impaired students in vocational school lack closed captioning on instructional videos",Accessibility and Public Services,green
+"Disabled commuters unable to cross railway footbridge due to absence of elevator or ramp",Accessibility and Public Services,amber
+"Public health center lacks adjustable height examination beds for pregnant disabled women",Accessibility and Public Services,amber
+"Rural citizen service portal requires English typing impossible for vernacular speakers",Accessibility and Public Services,green
+"Government hospital emergency ward entrance has concrete steps without wheelchair pathway",Accessibility and Public Services,red
+"Absence of sign language interpreters in police stations when deaf citizens lodge complaints",Accessibility and Public Services,amber
+"Rural secondary school has no physics and chemistry laboratory equipment for practicals",Smart Education and Vocational Skilling,green
+"Frequent internet disconnectivity disrupting digital smart board classes in tribal school",Smart Education and Vocational Skilling,green
+"Government ITI workshop using 40-year old obsolete lathe machines lacking CNC trainers",Smart Education and Vocational Skilling,green
+"High school dropout girls lack localized vocational training in mobile repairing and solar technician",Smart Education and Vocational Skilling,amber
+"Tribal students in primary school lack bilingual digital learning tools in Santhali Ol Chiki",Smart Education and Vocational Skilling,green
+"Absence of basic computer coding and digital literacy kits in rural upper primary schools",Smart Education and Vocational Skilling,green
+"Polytechnic engineering students lack virtual reality simulation labs for electrical safety",Smart Education and Vocational Skilling,green
+"Rural youth travelling 40 km to town for basic typing and computer operator course",Smart Education and Vocational Skilling,green
+"Science teaching in high schools purely theoretical due to lack of portable experiential science kits",Smart Education and Vocational Skilling,green
+"Vocational trades offered in tribal blocks do not match local demand for renewable energy technicians",Smart Education and Vocational Skilling,green
+"School library lacks books and modern digital e-readers for competitive examinations",Smart Education and Vocational Skilling,green
+"Lack of drone piloting and precision agriculture vocational skilling modules for rural youth",Smart Education and Vocational Skilling,green
+"Vocational training center in Dumka has no 3D printers or modern fabrication equipment",Smart Education and Vocational Skilling,green
+"Primary school children struggling with reading fluency due to lack of vernacular audiobooks",Smart Education and Vocational Skilling,green
+"High school dropouts unable to get apprentice placements due to lack of verified skill credentials",Smart Education and Vocational Skilling,green
+"Computer lab in rural college non-functional due to virus infected outdated operating systems",Smart Education and Vocational Skilling,green
+"Vocational courses in electric vehicle repair unavailable in industrial mining region",Smart Education and Vocational Skilling,green
+"Lack of hands-on electronics soldering and circuit prototyping kits in middle schools",Smart Education and Vocational Skilling,green
+"Students in tribal residential ashram school lack science experiment models and microscope slides",Smart Education and Vocational Skilling,green
+"Secondary school students cannot practice computer programming due to single shared PC for 80 students",Smart Education and Vocational Skilling,green

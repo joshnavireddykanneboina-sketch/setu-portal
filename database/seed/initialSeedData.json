@@ -1,0 +1,433 @@
+{
+  "users": [
+    {
+      "id": "CITIZEN-101",
+      "name": "Rameshwar Mahato",
+      "email": "citizen@setu.jharkhand.gov.in",
+      "passwordHash": "e39ff6ff5b814e1ab20d0431699f7a42:0e2ce8b480f59455a0be500ee9ac251a967c859223c0c33bb0124d6fdbc774f8bf0318b887ff540631f1c504d778a0f740cf78864f8dc613257d428e478c440f",
+      "role": "CITIZEN",
+      "district": "Dumka",
+      "block": "Jama",
+      "phone": "+91-9431102938",
+      "avatarInitials": "RM",
+      "avatarColor": "#2E7D32",
+      "createdAt": "2026-09-01T08:00:00.000Z"
+    },
+    {
+      "id": "CITIZEN-102",
+      "name": "Sunita Hembrom",
+      "email": "sunita.h@setu.jharkhand.gov.in",
+      "passwordHash": "d26799e222e1c522ff2bd54587390734:997c69872ee503657a0f1d958c215fdbefebe0b6297a4a2eb7c5b4f2bb045fedb6ff42164123c1cb704e4a483a97d4abdefe7cf3408e6e4a4fe22cc4a3e97104",
+      "role": "CITIZEN",
+      "district": "Ranchi",
+      "block": "Kanke",
+      "phone": "+91-9835129384",
+      "avatarInitials": "SH",
+      "avatarColor": "#00838F",
+      "createdAt": "2026-09-05T09:30:00.000Z"
+    },
+    {
+      "id": "UNIV-201",
+      "name": "Dr. Rajeshwar Prasad",
+      "email": "university@setu.jharkhand.gov.in",
+      "passwordHash": "591fe0d29183039f81f9f7995bcc51e4:801eda80377cf46e958320d99a1846b07da0e776ad60013cba6e1852707cdd5b5052441f4a6db385f957f5f6654295a134438364e7f677a464e74ae06ac5a3d5",
+      "role": "UNIVERSITY",
+      "institution": "BIT Mesra, Ranchi",
+      "department": "Department of Water Resources & Civil Engineering",
+      "title": "Head of Innovation & Incubation Cell",
+      "avatarInitials": "RP",
+      "avatarColor": "#1565C0",
+      "createdAt": "2026-08-15T09:00:00.000Z"
+    },
+    {
+      "id": "UNIV-202",
+      "name": "Dr. Swati Soren",
+      "email": "swati.bau@setu.jharkhand.gov.in",
+      "passwordHash": "5f62a8031466eb531850aca549f02b0e:f8fb7bd1b2a8c3e761a21f77d2ac0fee8f3047a6c122b5663b92f26cb7ae746b774ccb53245b34fe646e6f6c8cff805aee7175a5c225d038a7867668838a8c56",
+      "role": "UNIVERSITY",
+      "institution": "Birsa Agricultural University (BAU), Kanke",
+      "department": "Agronomy & Rural Development",
+      "title": "Professor & Extension Coordinator",
+      "avatarInitials": "SS",
+      "avatarColor": "#6A1B9A",
+      "createdAt": "2026-08-20T11:00:00.000Z"
+    },
+    {
+      "id": "INDUSTRY-301",
+      "name": "Amitabh Choudhury",
+      "email": "industry@setu.jharkhand.gov.in",
+      "passwordHash": "a7234a6baee5218db525586309fa092f:9d1318d4cdd32f96707ab22fde00daa042d5ba6096d8c352cdc45718e8968a55bfdcb5dc1836bf501ddba4fdc08457a7490be2a1ac213ac5df4e9922d69a87cd",
+      "role": "INDUSTRY",
+      "organization": "Tata Steel CSR & Sustainability Hub",
+      "designation": "Head of Community Innovation & CSR Funding",
+      "avatarInitials": "AC",
+      "avatarColor": "#E65100",
+      "createdAt": "2026-08-10T10:00:00.000Z"
+    },
+    {
+      "id": "GOVT-401",
+      "name": "Dr. Subhashish Roy, IAS",
+      "email": "admin@setu.jharkhand.gov.in",
+      "passwordHash": "7ea69c1e53736d4c8167e6e6fa38a2f6:44426a7e339fc9756b656b19e1a4f76c65c44c21b79f7a08a586c892d0977dc1baef56fc226d29d1cbda674c7710044fe0e7f7fbf45c1b14071cc8e8ece1b9a2",
+      "role": "GOVERNMENT",
+      "department": "Department of Higher & Technical Education, Govt. of Jharkhand",
+      "designation": "Joint Director & Nodal Officer - SETU Portal",
+      "avatarInitials": "SR",
+      "avatarColor": "#C62828",
+      "createdAt": "2026-08-01T08:00:00.000Z"
+    }
+  ],
+  "universities": [
+    {
+      "id": "HEI-01",
+      "name": "Birla Institute of Technology (BIT), Mesra",
+      "district": "Ranchi",
+      "specializations": ["Water Resources", "Robotics", "IoT & Sensor Networks", "Clean Energy", "AI & Data Science"],
+      "incubationCenter": "BIT STEP (Science & Technology Entrepreneurs Park)",
+      "facultyCount": 420,
+      "studentCapacity": 6500,
+      "activeProjects": 14
+    },
+    {
+      "id": "HEI-02",
+      "name": "IIT (ISM) Dhanbad",
+      "district": "Dhanbad",
+      "specializations": ["Mining & Environmental Remediation", "Water Management", "Geotechnical Eng", "Renewable Energy"],
+      "incubationCenter": "Centre for Innovation, Incubation and Entrepreneurship (CIIE)",
+      "facultyCount": 380,
+      "studentCapacity": 5800,
+      "activeProjects": 18
+    },
+    {
+      "id": "HEI-03",
+      "name": "NIT Jamshedpur",
+      "district": "East Singhbhum",
+      "specializations": ["Manufacturing & Automation", "Low-cost Rural Tech", "Structural Eng", "Waste Management"],
+      "incubationCenter": "NITJ Innovation & Startup Cell",
+      "facultyCount": 310,
+      "studentCapacity": 4900,
+      "activeProjects": 11
+    },
+    {
+      "id": "HEI-04",
+      "name": "Birsa Agricultural University (BAU)",
+      "district": "Ranchi",
+      "specializations": ["Smart Agriculture", "Soil Health & Bio-fertilizers", "Drought Resistant Crops", "Rural Livelihoods"],
+      "incubationCenter": "Agri-Business Incubation Centre (ABIC)",
+      "facultyCount": 260,
+      "studentCapacity": 3200,
+      "activeProjects": 15
+    },
+    {
+      "id": "HEI-05",
+      "name": "Ranchi University",
+      "district": "Ranchi",
+      "specializations": ["Public Health", "Socio-economic Studies", "Tribal Language & Culture Preservation", "Education"],
+      "incubationCenter": "RU Center of Excellence",
+      "facultyCount": 490,
+      "studentCapacity": 12000,
+      "activeProjects": 9
+    },
+    {
+      "id": "HEI-06",
+      "name": "Vinoba Bhave University",
+      "district": "Hazaribagh",
+      "specializations": ["Environmental Science", "Biotechnology", "Rural Management"],
+      "incubationCenter": "VBU Innovation Lab",
+      "facultyCount": 340,
+      "studentCapacity": 8500,
+      "activeProjects": 7
+    },
+    {
+      "id": "HEI-07",
+      "name": "Sido Kanhu Murmu University (SKMU)",
+      "district": "Dumka",
+      "specializations": ["Santhal Pargana Water Harvesting", "Forest Produce Processing", "Community Health"],
+      "incubationCenter": "SKMU Tribal Entrepreneurship Hub",
+      "facultyCount": 280,
+      "studentCapacity": 7100,
+      "activeProjects": 6
+    }
+  ],
+  "industries": [
+    {
+      "id": "IND-01",
+      "name": "Tata Steel CSR Division",
+      "headquarters": "Jamshedpur",
+      "focusAreas": ["Water Security", "Youth Employment", "Rural Healthcare", "Education Infra"],
+      "fundingPledged": 15000000,
+      "activeCollaborations": 8
+    },
+    {
+      "id": "IND-02",
+      "name": "Bokaro Steel Plant (SAIL)",
+      "headquarters": "Bokaro",
+      "focusAreas": ["Urban Waste Recycling", "Skill Training", "Clean Energy"],
+      "fundingPledged": 9500000,
+      "activeCollaborations": 5
+    },
+    {
+      "id": "IND-03",
+      "name": "Central Coalfields Limited (CCL) Innovation Cell",
+      "headquarters": "Ranchi",
+      "focusAreas": ["Mine Water Purification", "Land Reclamation", "Solar Micro-grids"],
+      "fundingPledged": 12000000,
+      "activeCollaborations": 6
+    },
+    {
+      "id": "IND-04",
+      "name": "Jharkhand MSME Innovation Alliance",
+      "headquarters": "Ranchi",
+      "focusAreas": ["Food Processing", "Handicrafts Automation", "Local Logistics"],
+      "fundingPledged": 6000000,
+      "activeCollaborations": 7
+    }
+  ],
+  "challenges": [
+    {
+      "id": "SETU-2026-8901",
+      "title": "Fluoride Contamination & Low-Cost Domestic Water Filtration in Dumka Villages",
+      "submittedBy": "Rameshwar Mahato",
+      "submitterRole": "PRI Gram Pradhan",
+      "submitterEmail": "citizen@setu.jharkhand.gov.in",
+      "submitterPhone": "+91-9431102938",
+      "district": "Dumka",
+      "block": "Jama",
+      "panchayat": "Barapalasi Gram Panchayat",
+      "coordinates": { "lat": 24.2676, "lng": 87.2479 },
+      "domain": "Water Resources",
+      "description": "Over 14 villages in Jama block have excessive fluoride levels (>3.5 mg/L) in borewell water, causing severe dental and skeletal fluorosis among school children. Existing RO plants are unsustainable due to high power cuts and expensive membrane replacement.",
+      "evidenceMedia": [
+        "https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1541888946425-d0fbb186c572?auto=format&fit=crop&w=800&q=80"
+      ],
+      "status": "FIELD_DEPLOYED",
+      "aiClassification": {
+        "primaryDomain": "Water Resources",
+        "secondaryDomain": "Healthcare",
+        "confidenceScore": 0.96,
+        "isDuplicate": false,
+        "matchedDuplicateId": null,
+        "priorityScore": 92,
+        "urgency": "HIGH",
+        "estimatedBeneficiaries": 18500
+      },
+      "assignedUniversityId": "HEI-01",
+      "assignedUniversityName": "Birla Institute of Technology (BIT), Mesra",
+      "industryPartnerId": "IND-01",
+      "industryPartnerName": "Tata Steel CSR Division",
+      "team": {
+        "facultyMentor": "Dr. Rajeshwar Prasad (BIT Mesra)",
+        "studentLead": "Ankit Kumar (B.Tech Environmental Eng, 4th Yr)",
+        "members": ["Ankit Kumar", "Priya Soren", "Rahul Verma", "Sneha Singh"],
+        "solutionName": "Jal-Shuddhi: Solar-Powered Bio-Char & Bone-Char Fluoride Filtration Unit",
+        "grantApproved": 450000,
+        "milestones": [
+          { "title": "Water Sample Analysis & Prototype Design", "completed": true, "date": "2026-03-15" },
+          { "title": "Lab Validation & Membrane Testing", "completed": true, "date": "2026-05-20" },
+          { "title": "Pilot Unit Installation at Jama Middle School", "completed": true, "date": "2026-07-10" },
+          { "title": "Community Testing & Field Certification", "completed": true, "date": "2026-09-01" }
+        ],
+        "patentFiled": true,
+        "patentNumber": "IN-2026-JH-004921",
+        "startupCreated": "Jal-Clean Tech Pvt. Ltd."
+      },
+      "createdAt": "2026-02-10T09:15:00.000Z",
+      "updatedAt": "2026-09-02T14:30:00.000Z"
+    },
+    {
+      "id": "SETU-2026-8902",
+      "title": "Lac Cultivation Yield Loss Due to Unseasonal Frost & Pest Attacks in Khunti",
+      "submittedBy": "Sunita Hembrom",
+      "submitterRole": "Self Help Group (SHG) Leader",
+      "submitterEmail": "sunita.h@setu.jharkhand.gov.in",
+      "submitterPhone": "+91-9835129384",
+      "district": "Khunti",
+      "block": "Torpa",
+      "panchayat": "Torpa Tribal Farmer Cooperative",
+      "coordinates": { "lat": 22.9841, "lng": 85.0841 },
+      "domain": "Agriculture",
+      "description": "Tribal lac farmers in Khunti suffer 60% crop failure annually due to unexpected temperature variations during lac insect settlement and lack of early warning for lac crawler emergence.",
+      "evidenceMedia": [
+        "https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80"
+      ],
+      "status": "TEAM_FORMED",
+      "aiClassification": {
+        "primaryDomain": "Agriculture",
+        "secondaryDomain": "Rural Livelihoods",
+        "confidenceScore": 0.94,
+        "isDuplicate": false,
+        "matchedDuplicateId": null,
+        "priorityScore": 85,
+        "urgency": "MEDIUM",
+        "estimatedBeneficiaries": 12000
+      },
+      "assignedUniversityId": "HEI-04",
+      "assignedUniversityName": "Birsa Agricultural University (BAU), Kanke",
+      "industryPartnerId": "IND-04",
+      "industryPartnerName": "Jharkhand MSME Innovation Alliance",
+      "team": {
+        "facultyMentor": "Dr. Swati Soren (BAU Kanke)",
+        "studentLead": "Rohan Munda (M.Sc Entomology)",
+        "members": ["Rohan Munda", "Kavita Mahato", "Deepak Bauri"],
+        "solutionName": "Resin-Guard: IoT Microclimate Sensor & Mobile Crawler Alert System",
+        "grantApproved": 300000,
+        "milestones": [
+          { "title": "Field Data Collection & Microclimate Sensor Deployment", "completed": true, "date": "2026-08-10" },
+          { "title": "Mobile Insect Emergence Predictor App", "completed": true, "date": "2026-09-20" },
+          { "title": "Field Trial with 200 SHG Farmers", "completed": false, "date": "2026-11-15" }
+        ],
+        "patentFiled": false,
+        "startupCreated": null
+      },
+      "createdAt": "2026-07-14T11:00:00.000Z",
+      "updatedAt": "2026-09-21T16:00:00.000Z"
+    },
+    {
+      "id": "SETU-2026-8903",
+      "title": "Severe Acid Mine Drainage & Heavy Metal Contamination in Coalfield Ponds around Dhanbad",
+      "submittedBy": "Subodh Kumar Saw",
+      "submitterRole": "Local NGO Secretary",
+      "submitterEmail": "subodh.ngo@gmail.com",
+      "submitterPhone": "+91-9431388120",
+      "district": "Dhanbad",
+      "block": "Jharia",
+      "panchayat": "Jharia Urban Local Body Ward 12",
+      "coordinates": { "lat": 23.7513, "lng": 86.4132 },
+      "domain": "Environment & Energy",
+      "description": "Water bodies near abandoned coal pits have pH levels below 3.5 with toxic lead and iron slurry, making them lethal for agricultural irrigation and cattle consumption.",
+      "evidenceMedia": [
+        "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=80"
+      ],
+      "status": "INDUSTRY_CO_DEVELOPMENT",
+      "aiClassification": {
+        "primaryDomain": "Environment & Energy",
+        "secondaryDomain": "Water Resources",
+        "confidenceScore": 0.98,
+        "isDuplicate": false,
+        "matchedDuplicateId": null,
+        "priorityScore": 95,
+        "urgency": "HIGH",
+        "estimatedBeneficiaries": 35000
+      },
+      "assignedUniversityId": "HEI-02",
+      "assignedUniversityName": "IIT (ISM) Dhanbad",
+      "industryPartnerId": "IND-03",
+      "industryPartnerName": "Central Coalfields Limited (CCL) Innovation Cell",
+      "team": {
+        "facultyMentor": "Prof. S. N. Mukhopadhyay (IIT ISM)",
+        "studentLead": "Vikramaditya Singh (Ph.D Mining Tech)",
+        "members": ["Vikramaditya Singh", "Neha Kumari", "Arjun Prasad"],
+        "solutionName": "Eco-Neutral: Algae & Fly-Ash Based Bioremediation for Pit Water Neutralization",
+        "grantApproved": 850000,
+        "milestones": [
+          { "title": "Mine Water Chemical Characterization", "completed": true, "date": "2026-04-10" },
+          { "title": "Fly-Ash Neutralization Pilot Reactor", "completed": true, "date": "2026-06-30" },
+          { "title": "Constructed Wetland Field Installation", "completed": true, "date": "2026-08-25" },
+          { "title": "Scalability & Commercial Deployment Proposal", "completed": false, "date": "2026-10-30" }
+        ],
+        "patentFiled": true,
+        "patentNumber": "IN-2026-JH-008192",
+        "startupCreated": "MineEco Solutions"
+      },
+      "createdAt": "2026-03-22T14:20:00.000Z",
+      "updatedAt": "2026-08-26T10:15:00.000Z"
+    },
+    {
+      "id": "SETU-2026-8904",
+      "title": "Digital Literacy Barrier and Offline Vernacular Learning Gaps in Primary Schools of West Singhbhum",
+      "submittedBy": "Birsa Deogam",
+      "submitterRole": "Primary School Teacher",
+      "submitterEmail": "birsa.teacher@gmail.com",
+      "submitterPhone": "+91-9934120911",
+      "district": "West Singhbhum",
+      "block": "Chaibasa",
+      "panchayat": "Jhinkpani Block",
+      "coordinates": { "lat": 22.5574, "lng": 85.8087 },
+      "domain": "Education",
+      "description": "Tribal children in remote Chaibasa primary schools cannot access digital education portals due to non-existent cellular coverage and absence of Ho/Mundari audio-visual learning content.",
+      "evidenceMedia": [
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+      ],
+      "status": "GOVT_VALIDATED",
+      "aiClassification": {
+        "primaryDomain": "Education",
+        "secondaryDomain": "Accessibility",
+        "confidenceScore": 0.95,
+        "isDuplicate": false,
+        "matchedDuplicateId": null,
+        "priorityScore": 88,
+        "urgency": "HIGH",
+        "estimatedBeneficiaries": 24000
+      },
+      "assignedUniversityId": "HEI-03",
+      "assignedUniversityName": "NIT Jamshedpur",
+      "industryPartnerId": null,
+      "industryPartnerName": null,
+      "team": null,
+      "createdAt": "2026-08-18T16:40:00.000Z",
+      "updatedAt": "2026-08-22T12:00:00.000Z"
+    },
+    {
+      "id": "SETU-2026-8905",
+      "title": "Low-Cost Solar Cold Storage for Perishable Vegetable Farmers in Ranchi Rural Markets",
+      "submittedBy": "Brijesh Prasad",
+      "submitterRole": "Farmer Producer Org (FPO) Secretary",
+      "submitterEmail": "brijesh.fpo@gmail.com",
+      "submitterPhone": "+91-9431188220",
+      "district": "Ranchi",
+      "block": "Mandai",
+      "panchayat": "Ormanjhi FPO Hub",
+      "coordinates": { "lat": 23.4831, "lng": 85.4522 },
+      "domain": "Rural Livelihoods",
+      "description": "Over 40% of harvested tomatoes and green chillies spoil before reaching urban markets due to lack of decentralised refrigerated storage.",
+      "evidenceMedia": [
+        "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80"
+      ],
+      "status": "SUBMITTED",
+      "aiClassification": {
+        "primaryDomain": "Rural Livelihoods",
+        "secondaryDomain": "Agriculture",
+        "confidenceScore": 0.92,
+        "isDuplicate": false,
+        "matchedDuplicateId": null,
+        "priorityScore": 82,
+        "urgency": "MEDIUM",
+        "estimatedBeneficiaries": 8500
+      },
+      "assignedUniversityId": null,
+      "assignedUniversityName": null,
+      "industryPartnerId": null,
+      "industryPartnerName": null,
+      "team": null,
+      "createdAt": "2026-09-25T10:00:00.000Z",
+      "updatedAt": "2026-09-25T10:00:00.000Z"
+    }
+  ],
+  "districts": [
+    { "name": "Ranchi", "challenges": 42, "resolved": 12, "activeHEIs": 4, "csrFunding": "₹1.4 Cr" },
+    { "name": "Dhanbad", "challenges": 38, "resolved": 9, "activeHEIs": 2, "csrFunding": "₹1.8 Cr" },
+    { "name": "East Singhbhum", "challenges": 35, "resolved": 11, "activeHEIs": 2, "csrFunding": "₹2.1 Cr" },
+    { "name": "Dumka", "challenges": 29, "resolved": 8, "activeHEIs": 2, "csrFunding": "₹85 L" },
+    { "name": "Hazaribagh", "challenges": 24, "resolved": 6, "activeHEIs": 1, "csrFunding": "₹60 L" },
+    { "name": "Khunti", "challenges": 19, "resolved": 5, "activeHEIs": 1, "csrFunding": "₹45 L" },
+    { "name": "Bokaro", "challenges": 27, "resolved": 7, "activeHEIs": 1, "csrFunding": "₹1.1 Cr" },
+    { "name": "Deoghar", "challenges": 22, "resolved": 4, "activeHEIs": 1, "csrFunding": "₹50 L" },
+    { "name": "Palamu", "challenges": 26, "resolved": 5, "activeHEIs": 1, "csrFunding": "₹40 L" },
+    { "name": "West Singhbhum", "challenges": 31, "resolved": 6, "activeHEIs": 1, "csrFunding": "₹75 L" },
+    { "name": "Giridih", "challenges": 18, "resolved": 3, "activeHEIs": 1, "csrFunding": "₹35 L" },
+    { "name": "Gumla", "challenges": 16, "resolved": 3, "activeHEIs": 1, "csrFunding": "₹30 L" }
+  ],
+  "analyticsSummary": {
+    "totalChallengesReceived": 348,
+    "validatedByGovt": 284,
+    "heisParticipating": 14,
+    "industryPartnersEngaged": 26,
+    "activeProjects": 112,
+    "fieldSolutionsDeployed": 48,
+    "patentsFiled": 19,
+    "startupsCreated": 12,
+    "totalBeneficiariesImpacted": 420000,
+    "totalCSRFundingMobilized": 84500000
+  }
+}
