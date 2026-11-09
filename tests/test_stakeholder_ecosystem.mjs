@@ -114,6 +114,19 @@ async function runTests() {
     });
     assert(loginRes.status === 200 && loginRes.data.user.role === 'CITIZEN', '3. Citizen login succeeds with valid token issuance');
 
+    // 3b. Login as University and Admin to get privileged tokens
+    const uniLoginRes = await request('POST', '/api/auth/login', {
+      email: 'university@setu.jharkhand.gov.in',
+      password: 'setu123'
+    });
+    const uniToken = uniLoginRes.data?.token;
+
+    const adminLoginRes = await request('POST', '/api/auth/login', {
+      email: 'admin@setu.jharkhand.gov.in',
+      password: 'setu123'
+    });
+    const adminToken = adminLoginRes.data?.token;
+
     // 4. Portal A: Citizen Submits Societal Challenge with GPS and Media
     const createRes = await request('POST', '/api/challenges', {
       title: 'Groundwater Fluoride Exceeding 5.2 ppm in Jama Block Wells',
@@ -137,7 +150,7 @@ async function runTests() {
     const acceptRes = await request('POST', `/api/challenges/${challengeId}/hei-decision`, {
       decision: 'ACCEPT',
       facultyMentor: 'Dr. Rajeshwar Prasad (BIT Mesra)'
-    });
+    }, { authorization: `Bearer ${uniToken}` });
     assert(acceptRes.status === 200 && acceptRes.data.challenge?.status === 'HEI_ACCEPTED', '5. University HEI accepts project assignment');
 
     // 6. Portal B: University Forms Multidisciplinary Student Team
@@ -147,7 +160,7 @@ async function runTests() {
       members: ['Ankit Kumar', 'Priya Soren', 'Rahul Verma'],
       departments: ['Civil & Environmental Engineering', 'Chemistry'],
       solutionName: 'Adsorption-Based Solar Community Water Purifier'
-    });
+    }, { authorization: `Bearer ${uniToken}` });
     assert(teamRes.status === 200 && teamRes.data.challenge?.team?.studentLead === 'Ankit Kumar (B.Tech 4th Yr)', '6. Multidisciplinary student team assembled');
 
     // 7. Portal B: Update Research Roadmap & Prototype Stage
@@ -155,17 +168,19 @@ async function runTests() {
       prototypeStage: 'LAB_PROTOTYPE',
       researchPlan: 'Phase 1: Bench test zeolite adsorbent. Phase 2: Assemble 500 LPH pilot unit.',
       expectedPilotDate: '2026-11-20'
-    });
+    }, { authorization: `Bearer ${uniToken}` });
     assert(planRes.status === 200 && planRes.data.challenge?.team?.prototypeStage === 'LAB_PROTOTYPE', '7. Prototype stage updated to LAB_PROTOTYPE');
 
     // 8. Portal C: Industry Pledges CSR Prototyping Grant
+    const iLogin = await request('POST', '/api/auth/login', { email: 'industry@setu.jharkhand.gov.in', password: 'setu123' });
+    const industryToken = iLogin.data?.token;
     const fundRes1 = await request('POST', `/api/challenges/${challengeId}/fund`, {
       industryPartnerId: 'IND-01',
       industryPartnerName: 'Tata Steel CSR Division',
       grantAmount: 450000,
       industryMentor: 'Amitabh Choudhury (CSR Lead)',
       transactionRef: 'CSR-PO-2026-904'
-    });
+    }, { authorization: `Bearer ${industryToken}` });
     assert(fundRes1.status === 201 && fundRes1.data.challenge?.team?.grantApproved === 450000, '8. Industry CSR grant pledged (₹4,50,000)');
 
     // 9. Portal C: Anti-Duplicate Transaction Protection Test
@@ -175,7 +190,7 @@ async function runTests() {
       grantAmount: 450000,
       industryMentor: 'Amitabh Choudhury (CSR Lead)',
       transactionRef: 'CSR-PO-2026-904'
-    });
+    }, { authorization: `Bearer ${industryToken}` });
     assert(fundRes2.status === 409, '9. Anti-Duplicate transaction protection triggered (HTTP 409 Conflict)');
 
     // 10. Portal B: Upload Village Field Testing Report
@@ -184,7 +199,7 @@ async function runTests() {
       testLocation: 'Jama Panchayat, Dumka',
       beneficiariesSurveyed: 350,
       outcomeMetrics: 'Fluoride reduced from 5.2 ppm to 0.7 ppm. Community acceptance verified by Mukhiya.'
-    });
+    }, { authorization: `Bearer ${uniToken}` });
     assert(reportRes.status === 200 && reportRes.data.challenge?.team?.fieldReports?.length > 0, '10. Village field testing report uploaded');
 
     // 11. Portal B: Record Patent & Commercial Startup
@@ -192,19 +207,19 @@ async function runTests() {
       patentNumber: 'IN-PAT-2026-88129',
       patentTitle: 'Zeolite Composite Matrix for Fluoride Remediation',
       startupCreated: 'JharPure Tech Pvt. Ltd.'
-    });
+    }, { authorization: `Bearer ${uniToken}` });
     assert(patentRes.status === 200 && patentRes.data.challenge?.team?.patentFiled === true, '11. Intellectual property patent & startup spinoff recorded');
 
     // 12. Portal D: Government Administrator 24 Districts API
-    const distRes = await request('GET', '/api/admin/districts');
+    const distRes = await request('GET', '/api/admin/districts', null, { authorization: `Bearer ${adminToken}` });
     assert(distRes.status === 200 && distRes.data.length === 24, '12. Government Admin covers all 24 Jharkhand districts');
 
     // 13. Portal D: State Innovation Pulse & Analytics
-    const analyticsRes = await request('GET', '/api/admin/analytics');
+    const analyticsRes = await request('GET', '/api/admin/analytics', null, { authorization: `Bearer ${adminToken}` });
     assert(analyticsRes.status === 200 && analyticsRes.data.metrics?.totalCSRFundingMobilized > 0, '13. State governance analytics & live pulse metrics verified');
 
     // 14. Portal D: RFC4180 CSV Export Generation
-    const csvRes = await request('GET', '/api/admin/export-csv');
+    const csvRes = await request('GET', '/api/admin/export-csv', null, { authorization: `Bearer ${adminToken}` });
     assert(csvRes.status === 200 && csvRes.headers['content-type']?.includes('text/csv'), '14. Government executive state report CSV export generated');
     assert(typeof csvRes.data === 'string' && csvRes.data.includes('Challenge ID') && csvRes.data.includes('Dumka'), '   CSV content contains challenge headers and district data');
 
