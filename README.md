@@ -82,7 +82,7 @@ To maintain engineering transparency, the table below outlines what is currently
 | Module | Sub-Feature | Status | Notes |
 | :--- | :--- | :--- | :--- |
 | **Citizen Intake** | Multimedia Web Form & Location Inputs | ✅ Implemented | Supports photo attachments, district/block selectors |
-| **Citizen Intake** | Audio Voice Recording & Direct Video Capture | 🟡 In Progress | Basic file upload works; live WebRTC recording planned |
+| **Citizen Intake** | Audio Voice Recording & Direct Video Capture | ✅ Implemented | `AudioRecorder` & `VideoRecorder` classes in `src/services/mediaRecorder.js`; RECORD_AUDIO permission added to Android manifest |
 | **Privacy Layer** | EXIF Metadata Scrubbing & Anonymization | ✅ Implemented | Strips camera serials & GPS tags; assigns anon tokens |
 | **Localization** | Multi-Language Toggle (EN, HI, SAT) | ✅ Implemented | Instant reactive translation via `src/services/i18n.js` |
 | **Accessibility** | Reduced Motion Mode | ✅ Implemented | Disables 3D canvas loops & heavy animations via toggle |
@@ -92,10 +92,10 @@ To maintain engineering transparency, the table below outlines what is currently
 | **State Dashboard** | Executive District Heatmaps & Analytics Cockpit | ✅ Implemented | Visual distribution of 24 districts, funding totals |
 | **Backend API** | REST Endpoints (`/challenges`, `/auth`, `/health`) | ✅ Implemented | Express 5.x server with JSON database engine |
 | **Database** | Persistent File-Backed JSON Store | ✅ Implemented | Complete seed data for 24 districts, HEIs, and CSR partners |
-| **Database** | PostgreSQL / MongoDB Production Migration | 🟡 Roadmap | Schema designed; production adapter scheduled for next sprint |
+| **Database** | PostgreSQL / MongoDB Production Migration | ✅ Implemented | Full adapters in `database/adapters/`; switch via `SETU_DB_ADAPTER=postgres\|mongo` env var |
 | **Machine Learning** | Scikit-Learn TF-IDF Domain Classifier | ✅ Implemented | Standalone Python pipeline with Subprocess Node.js bridge |
-| **Machine Learning** | IndicBERT / Bilingual Semantic Deduplication | 🟡 In Progress | Prototype logic ready; training on Jharkhand dataset underway |
-| **Mobile App** | Offline-First Android PWA / React Native APK | 🟡 Roadmap | Responsive web app operational; native wrapper planned |
+| **Machine Learning** | IndicBERT / Bilingual Semantic Deduplication | ✅ Implemented | Two-layer engine: TF-IDF (always-on) + LaBSE/IndicBERT embeddings (opt-in via `SETU_USE_INDICBERT=1`); supports EN/HI/SAT Ol Chiki scripts |
+| **Mobile App** | Offline-First Android PWA / Capacitor APK | ✅ Implemented | Full service worker (`public/sw.js`), Web App Manifest, Capacitor Android project with IndexedDB offline queue and background sync |
 
 ---
 
@@ -118,6 +118,8 @@ To maintain engineering transparency, the table below outlines what is currently
 - **Language**: Python 3.10+
 - **Libraries**: [Scikit-Learn](https://scikit-learn.org), [Joblib](https://joblib.readthedocs.io), [NumPy](https://numpy.org), [PyYAML](https://pyyaml.org)
 - **Model**: Sublinear TF-IDF Vectorizer + Multiclass Logistic Regression Pipeline ($< 10\text{ ms}$ inference)
+- **Bilingual Deduplication**: Two-layer semantic engine — TF-IDF cosine similarity (always-on) with optional LaBSE / AI4Bharat IndicBERT sentence embeddings for cross-lingual EN ↔ HI ↔ SAT matching (enable via `SETU_USE_INDICBERT=1`)
+- **Scripts**: EN/HI/SAT Unicode token patterns in `ml/src/duplicate_check.py` covering Devanagari (U+0900–U+097F) and Ol Chiki (U+1C50–U+1C7F) scripts
 - **Generative AI**: Optional [Google Gemini 1.5 Flash](https://ai.google.dev) for natural language discovery
 
 ---
@@ -171,7 +173,11 @@ SETU/
 │   ├── routes/                    # API endpoints (/challenges, /chat, /auth, etc.)
 │   └── services/                  # Business logic (appointments, ML bridge, routing)
 ├── database/                      # Database Layer
-│   ├── db.js                      # JSON database query engine
+│   ├── db.js                      # JSON database query engine (default adapter)
+│   ├── adapters/                  # Production database adapters
+│   │   ├── index.js               # Adapter selector (SETU_DB_ADAPTER env var)
+│   │   ├── postgresAdapter.js     # PostgreSQL adapter via `pg`
+│   │   └── mongoAdapter.js        # MongoDB adapter via `mongodb`
 │   ├── data/                      # Active persistent database (setu_db.json)
 │   ├── schema/                    # JSON schema definitions
 │   └── seed/                      # Initial seed data (24 districts, HEIs, CSR)
@@ -190,7 +196,7 @@ SETU/
 ├── src/                           # React 18 Application Source
 │   ├── components/                # Reusable UI widgets (Navbar, Hero, SupportGrid, etc.)
 │   ├── pages/                     # Full-page routes (AdminPortal, Counselling, etc.)
-│   ├── services/                  # Client stores, API client, i18n, privacyService
+│   ├── services/                  # Client stores, API client, i18n, privacyService, mediaRecorder
 │   ├── styles/                    # Global stylesheets and typography
 │   ├── App.jsx                    # Root component and client-side router
 │   └── main.jsx                   # React DOM entry point
@@ -272,17 +278,23 @@ The ML model comes pre-trained with serialized binaries in `ml/models/`. If you 
 # 1. Navigate to ML directory & install dependencies
 pip install -r ml/requirements.txt
 
-# 2. Train Thematic Domain Classifier
+# 2. (Optional) Install bilingual IndicBERT / LaBSE embedding support
+pip install sentence-transformers
+
+# 3. Train Thematic Domain Classifier
 python ml/src/train_intent.py
 
-# 3. Train Urgency & Severity Model
+# 4. Train Urgency & Severity Model
 python ml/src/train_urgency.py
 
-# 4. Run Benchmark Evaluation
+# 5. Run Benchmark Evaluation
 python ml/src/evaluate.py
 
-# 5. Run Single Prediction Test
+# 6. Run Single Prediction Test
 python ml/src/predict.py "High fluoride detected in drinking water handpump in Dumka"
+
+# 7. Run Bilingual Duplicate Detection (LaBSE embeddings active)
+SETU_USE_INDICBERT=1 python ml/src/duplicate_check.py
 ```
 
 ---
@@ -317,12 +329,20 @@ Key endpoint summary:
 
 ## 15. Database Information
 
-SETU utilizes a file-backed JSON database engine (`database/db.js`) optimized for rapid prototyping, deterministic demo states, and zero external database dependencies.
+SETU ships with a file-backed JSON engine for development and a pair of production adapters for scale-out deployment.
+
+| Environment | Adapter | How to Enable |
+| :--- | :--- | :--- |
+| **Local / Demo** | `database/db.js` (JSON) | Default — no config needed |
+| **Staging / Production** | `database/adapters/postgresAdapter.js` | Set `SETU_DB_ADAPTER=postgres` + `DATABASE_URL=postgres://…` |
+| **Cloud / Atlas** | `database/adapters/mongoAdapter.js` | Set `SETU_DB_ADAPTER=mongo` + `MONGODB_URI=mongodb+srv://…` |
+
 - **Data Location**: `database/data/setu_db.json`
 - **Seed Source**: `database/seed/initialSeedData.json`
 - **Schema Definitions**: Detailed schemas for challenges, universities, industries, and districts reside in `database/schema/schema.json`.
-
-*(For production scale, the query interfaces in `database/db.js` can be mapped directly to PostgreSQL or MongoDB without altering route controllers).*
+- **Adapter Selector**: `database/adapters/index.js` reads `SETU_DB_ADAPTER` at startup and exports the correct adapter — no route-controller changes required.
+- **PostgreSQL**: Tables auto-created on `initDb()`; install with `npm install pg`.
+- **MongoDB**: Collections and indexes auto-created on `initDb()`; install with `npm install mongodb`.
 
 ---
 
@@ -340,10 +360,11 @@ SETU utilizes a file-backed JSON database engine (`database/db.js`) optimized fo
 
 ## 17. Future Enhancements & Roadmap
 
-1. **Indic Language Voice-to-Text**: Integration of Bhashini / Whisper models for direct speech-to-text in local Santhali, Mundari, Ho, and Kurukh tribal dialects.
+1. **Indic Language Voice-to-Text**: Integration of Bhashini / Whisper models for direct speech-to-text transcription of audio voice recordings in local Santhali, Mundari, Ho, and Kurukh tribal dialects.
 2. **Automated Patent Filing Workflow**: Automated IP document generation module aligned with the Indian Patent Office (IPO) fast-track scheme for universities.
 3. **Geo-Spatial Satellite Verification**: Automated satellite imagery integration (ISRO Bhuvan / Sentinel-2) to cross-verify agricultural and deforestation reports.
 4. **Smart Contract CSR Escrow**: Milestone-gated disbursement of corporate CSR funds upon verified field inspection by district nodal officers.
+5. **IndicBERT Fine-Tuning on Jharkhand Dataset**: Fine-tune the AI4Bharat IndicBERT model on the domain-specific Jharkhand challenge corpus for even higher bilingual deduplication accuracy.
 
 ---
 

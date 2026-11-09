@@ -77,6 +77,19 @@
         android:maxSdkVersion="32" />
 
     <!-- ─────────────────────────────────────────────────────────────────── -->
+    <!-- Audio Recording — Voice evidence capture for challenge submissions  -->
+    <!-- Privacy: Microphone accessed only during an explicit recording     -->
+    <!-- action initiated by the user. Never background-recorded.          -->
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <!-- Video capture storage — required for saving recorded video clips   -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- ─────────────────────────────────────────────────────────────────── -->
     <!-- Vibration — Tactile feedback for notifications                     -->
     <!-- ─────────────────────────────────────────────────────────────────── -->
     <uses-permission android:name="android.permission.VIBRATE" />
