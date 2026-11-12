@@ -46,8 +46,10 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
 
   // A. SECURITY MANDATE: NEVER cache private authenticated API responses publicly in CacheStorage!
-  // Any request to /api/* must pass directly to the network without being cached in the Service Worker.
-  if (url.pathname.startsWith('/api/')) {
+  // Any request to /api/* OR to the backend IP must pass directly to the network.
+  if (url.pathname.startsWith('/api/') || 
+      url.hostname === '192.168.1.2' ||
+      url.port === '5000') {
     event.respondWith(
       fetch(request).catch(() => {
         // Return structured offline JSON response for failed API calls

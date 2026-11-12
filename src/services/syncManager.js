@@ -10,11 +10,26 @@ import {
   getAllQueueItems 
 } from './offlineStorage';
 import { apiCreateChallenge } from './apiClient';
+import { getApiBaseUrl } from './apiConfig';
 
-let isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
+// On Capacitor Android, navigator.onLine is unreliable inside WebView.
+// Default to true and let the actual network probe correct it.
+let isOnline = true;
 let isSyncing = false;
 let listeners = new Set();
 let lastSyncTime = null;
+
+// Probe the backend to get the real connectivity status
+async function probeConnectivity() {
+  try {
+    const base = getApiBaseUrl();
+    if (!base) return false;
+    const res = await fetch(`${base}/health`, { method: 'GET', cache: 'no-store' });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
 
 export function getSyncState() {
   return {
@@ -133,10 +148,10 @@ export async function triggerBackgroundSync() {
         summary.failed++;
         console.warn(`[SYNC MANAGER] Failed syncing item ${item.idempotencyKey}:`, err.message);
 
-        // Record error and update status to FAILED
-        const permanent = err.status >= 400 && err.status < 500 && err.status !== 408 && err.status !== 429;
+        // Record error and update status to FAILED (always retryable)
+        const permanent = false; // Never permanently fail — network/server may recover
         await updateQueueItem(item.idempotencyKey, {
-          status: permanent ? 'FAILED_PERMANENT' : 'FAILED',
+          status: 'FAILED',
           lastError: err.message || 'Network submission error'
         });
 

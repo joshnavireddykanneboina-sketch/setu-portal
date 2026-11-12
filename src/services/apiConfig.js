@@ -34,13 +34,6 @@ export function isDisallowedApiHost(raw) {
     ) {
       return true;
     }
-    if (
-      /^10\./.test(host) ||
-      /^192\.168\./.test(host) ||
-      /^172\.(1[6-9]|2\d|3[0-1])\./.test(host)
-    ) {
-      return true;
-    }
     return false;
   } catch {
     return true;

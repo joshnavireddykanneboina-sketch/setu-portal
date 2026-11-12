@@ -5,30 +5,16 @@ import './styles/index.css';
 import { initNativeShell } from './services/nativeShell.js';
 
 // ─── PWA Service Worker ────────────────────────────────────────────────────
-// Registered only on secure origins (https:// or localhost).
-// Inside the Capacitor WebView, androidScheme:"https" makes the origin
-// https://localhost, so the SW registers and caches work correctly.
-if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then((reg) => {
-        window.__SETU_SW_REGISTRATION__ = reg;
-        console.log('[SETU PWA] Service Worker registered with scope:', reg.scope);
-
-        reg.onupdatefound = () => {
-          const installingWorker = reg.installing;
-          if (installingWorker) {
-            installingWorker.onstatechange = () => {
-              if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                console.log('[SETU PWA] New version available; refresh to activate.');
-              }
-            };
-          }
-        };
-      })
-      .catch((err) => {
-        console.warn('[SETU PWA] Service Worker registration failed:', err);
-      });
+// Unregister any existing service worker to prevent it intercepting API calls
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const reg of registrations) {
+      reg.unregister();
+      console.log('[SETU PWA] Service Worker unregistered to allow direct API access.');
+    }
+  });
+  caches.keys().then((names) => {
+    for (const name of names) caches.delete(name);
   });
 }
 

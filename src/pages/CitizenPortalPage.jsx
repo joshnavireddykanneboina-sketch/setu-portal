@@ -452,7 +452,7 @@ export default function CitizenPortalPage({ onNavigate }) {
       block,
       panchayat: panchayat || `${block} Central Panchayat`,
       coordinates: coordinates || { lat: 23.3441, lng: 85.3096, consentGiven: false },
-      domain: domain === 'auto' ? undefined : domain,
+      domain: domain === 'auto' ? 'General' : (domain || 'General'),
       description: description.trim(),
       urgencyPreference,
       evidenceMedia: mediaList,
